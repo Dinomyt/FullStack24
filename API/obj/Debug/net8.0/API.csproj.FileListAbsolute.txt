@@ -134,3 +134,4 @@ C:\Users\nengl\Documents\VS Code\Level3\FullStack24\API\obj\Debug\net8.0\refint\
 C:\Users\nengl\Documents\VS Code\Level3\FullStack24\API\obj\Debug\net8.0\API.pdb
 C:\Users\nengl\Documents\VS Code\Level3\FullStack24\API\obj\Debug\net8.0\API.genruntimeconfig.cache
 C:\Users\nengl\Documents\VS Code\Level3\FullStack24\API\obj\Debug\net8.0\ref\API.dll
+C:\Users\nengl\Documents\VS Code\Level3\FullStack24\API\obj\Debug\net8.0\API.sourcelink.json
