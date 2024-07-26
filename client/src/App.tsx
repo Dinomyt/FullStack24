@@ -1,3 +1,4 @@
+import ProductSkeleton from "./components/ProductSkeleton"
 import ProductTable from "./components/ProductTable"
 
 

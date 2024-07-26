@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nengl\\Documents\\VS Code\\Level3\\FullStack24\\api\\API.csproj": {}
+    "C:\\Users\\nengl\\Documents\\VS Code\\Level3\\FullStack24\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nengl\\Documents\\VS Code\\Level3\\FullStack24\\api\\API.csproj": {
+    "C:\\Users\\nengl\\Documents\\VS Code\\Level3\\FullStack24\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nengl\\Documents\\VS Code\\Level3\\FullStack24\\api\\API.csproj",
+        "projectUniqueName": "C:\\Users\\nengl\\Documents\\VS Code\\Level3\\FullStack24\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\nengl\\Documents\\VS Code\\Level3\\FullStack24\\api\\API.csproj",
+        "projectPath": "C:\\Users\\nengl\\Documents\\VS Code\\Level3\\FullStack24\\API\\API.csproj",
         "packagesPath": "C:\\Users\\nengl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nengl\\Documents\\VS Code\\Level3\\FullStack24\\api\\obj\\",
+        "outputPath": "C:\\Users\\nengl\\Documents\\VS Code\\Level3\\FullStack24\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\nengl\\AppData\\Roaming\\NuGet\\NuGet.Config"

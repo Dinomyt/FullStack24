@@ -22,6 +22,7 @@ namespace API.Controllers
         //Returns whats in our Product table
         [HttpGet]
         public async Task<IActionResult> Products(){
+            // await Task.Delay(4000);
             return Ok(await _context.Products.AsNoTracking().ToListAsync());
         }
         //Creates a product and saves it to our database
