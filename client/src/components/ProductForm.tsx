@@ -1,31 +1,74 @@
-import { useDisclosure, Button, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, FormControl, FormLabel, Input, VStack, Textarea, Text, Switch, HStack } from "@chakra-ui/react"
-import React, { useState } from "react";
+import { Button, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, Input, VStack, Textarea, Text, Switch, HStack, useToast } from "@chakra-ui/react"
+import { useState } from "react";
 import { BASE_URL } from "../constant";
 import axios from "axios";
+import { Product } from "./ProductTable";
 
 interface ProductFormProps{
     isOpen: boolean;
     onClose: () => void;
+    fetchProduct: () => void;
+    currentData?: Product
 }
 
-const ProductForm = ({isOpen, onClose}:ProductFormProps) => {
+const ProductForm = ({isOpen, onClose, fetchProduct, currentData}:ProductFormProps) => {
     const [product, setProduct] = useState({
-      id:0,
-      name: '',
-      description: '',
-      price: '',
-      isInStore: false
+      id: currentData?.id || 0,
+      name: currentData?.name || '',
+      description: currentData?.description || '',
+      price: currentData?.price || '',
+      isInStore: currentData?.isInStore ||false
     })
+
+    const toast= useToast();
 
     const onSave = () => {
       console.log(product);
+      if (currentData?.id){
+        editProduct();
+      } else {
+        addProduct();
+        console.log(product);
+      }
+
+    }
+
+    const addProduct = () => {
       axios.post(`${BASE_URL}/api/Product`, product)
            .then(response => {
             console.log(response);
+            onClose();
+            fetchProduct();
+            toast({
+              title: 'Product Added',
+              description: `${product.name} successfully added`,
+              status: 'success',
+              duration: 9000,
+              isClosable: true,
+            })
            })
            .catch(error => {
             console.log(error);
            })
+    }
+
+    const editProduct = () => {
+      axios.put(`${BASE_URL}/api/Product/${currentData?.id}`, product)
+      .then(() => {
+        onClose();
+        fetchProduct();
+
+        toast({
+          title: 'Product Edited',
+          description: `${product.name} successfully edited`,
+          status: 'success',
+          duration: 9000,
+          isClosable: true,
+        })
+      })
+      .catch(error => {
+        console.log(error);
+      })
     }
 
     return (
